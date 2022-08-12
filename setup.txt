@@ -1,0 +1,5 @@
+a/ you need to copy the the folder onSpring in user.home
+
+Main class: io.OnSpringLauncher
+user.home/onSpring/onSpring.properties will then be read 
+see also docs/onSpring.pdf
