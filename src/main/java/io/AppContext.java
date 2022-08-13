@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.calypso.hao.infra.spring.MyPropertyPlaceholderConfigurer;
+import onspring.infra.spring.MyPropertyPlaceholderConfigurer;
 
 public class AppContext {
 	static ApplicationContext context;

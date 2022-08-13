@@ -1,4 +1,4 @@
-package com.calypso.hao.infra.spring;
+package onspring.infra.spring;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -22,6 +22,7 @@ public class MyPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigur
 	private static final String DB_PW_PARAMETER_NAME = "database.password";
 	
 	private Base32 decoder = new Base32();
+	
 	
 	@Override
 	protected String resolveSystemProperty(String key) {

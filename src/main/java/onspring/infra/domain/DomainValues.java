@@ -1,4 +1,4 @@
-package com.calypso.hao.infra.domain;
+package onspring.infra.domain;
 
 public class DomainValues {
 	public final static String SEPARATOR=";";
