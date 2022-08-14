@@ -3,3 +3,29 @@ a/ you need to copy the the folder onSpring in user.home
 Main class: io.OnSpringLauncher
 user.home/onSpring/onSpring.properties will then be read 
 see also docs/onSpring.pdf
+
+
+
+Zip with dependencies: gradle.bat clean jar copyDependencies customDistZip
+result: build\distribution\OnChessBoardLauncher-1.2.1.zip
+
+Installation : 
+gradle.bat clean jar copyDependencies customDistZip installCustomDist
+result: build\install\OnChessBoardLauncher
+C:\Users\HaoNguyen\workspace\HAO\2021\onSpring\build\install\OnSpring>java -classpath ./* io.OnSpringLauncher
+Aug 14, 2022 2:27:18 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7a0ac6e3: startup date [Sun Aug 14 14:27:18 CEST 2022]; root of context hierarchy
+Aug 14, 2022 2:27:18 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [onspring-applicationContext.xml]
+Aug 14, 2022 2:27:19 PM onspring.infra.spring.MyPropertyPlaceholderConfigurer loadProperties
+INFO: Loading properties file from URL [file:C:/Users/HaoNguyen/onSpring/onSpring.properties]
+Aug 14, 2022 2:27:19 PM onspring.infra.spring.MyPropertyPlaceholderConfigurer loadProperties
+INFO: Loading properties file from URL [file:C:/Users/HaoNguyen/onSpring/onSpring.properties]
+14:27:19.034 [main] INFO onspring.infra.spring.MyPropertyPlaceholderConfigurer - SMTP_PASSWORD:
+14:27:19.035 [main] INFO onspring.infra.spring.MyPropertyPlaceholderConfigurer - database.password:calypso
+14:27:19.035 [main] INFO onspring.infra.spring.MyPropertyPlaceholderConfigurer - SMTP_PORT:587
+14:27:19.036 [main] INFO onspring.infra.spring.MyPropertyPlaceholderConfigurer - SMTP_TTLS:true
+14:27:19.036 [main] INFO onspring.infra.spring.MyPropertyPlaceholderConfigurer - SMTP_AUTH:true
+14:27:19.037 [main] INFO onspring.infra.spring.MyPropertyPlaceholderConfigurer - SMTP_PROTOCOL:SMTP
+14:27:19.037 [main] INFO onspring.infra.spring.MyPropertyPlaceholderConfigurer - SMTP_USERNAME:hao_nguyen@calypso.com
+14:27:19.037 [main] INFO onspring.infra.spring.MyPropertyPlaceholderConfigurer - SMTP_SERVER:smtp.office365.com

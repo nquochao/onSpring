@@ -53,16 +53,30 @@ dependencies {
 			  
     )
 // Include dependent libraries in archive.
-
+}  
 jar {
   manifest { 
     attributes "Main-Class": "io."+projectname+"Launcher"
   }  
 
-  from {
-    configurations.implementation.collect { it.isDirectory() ? it : zipTree(it) }
-  }
 }
+String libDir='dependencies'
+task copyDependencies(type: Copy) {
+   from configurations.compileClasspath
+   into libDir
+}
+// see customization on plugin distribution https://docs.gradle.org/current/userguide/distribution_plugin.html
+// example 3
+distributions {
+ 
+    custom {
+  			distributionBaseName = projectname
+            contents {
+    		        from libDir
+    		        from jar.outputs.files
+    		        from 'src/main/resources'
+ 		    }
+    }
 
   }
   
